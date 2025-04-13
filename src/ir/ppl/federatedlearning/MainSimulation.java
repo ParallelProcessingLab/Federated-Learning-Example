@@ -5,7 +5,7 @@ import java.util.Random;
 public class MainSimulation {
 
     public static void main(String[] args) {
-        double initialRewardRate = 0.2;
+        double initialRewardRate = 0.05;
 
         IncentiveFogDevice bs = new IncentiveFogDevice(initialRewardRate);
 
@@ -21,8 +21,8 @@ public class MainSimulation {
             bs.registerSensor(sensor);
         }
 
-        int maxRounds = 20;
-        double targetAccuracy = 0.85;
+        int maxRounds = 100;
+        double targetAccuracy = 0.92;
 
         FederatedController controller = new FederatedController(bs, maxRounds, targetAccuracy);
 
